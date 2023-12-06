@@ -7,12 +7,15 @@ set(CMAKE_CXX_STANDARD 20)
 add_executable( ${TARGET_NAME}
     main.cpp
     lib/trie.cpp
+    lib/loadInput.cpp
     one/one.cpp
     two/two.cpp
+    three/three.cpp
 )
 
 target_include_directories( ${TARGET_NAME} PRIVATE
     one/
     two/
+    three/
     lib/
 )
