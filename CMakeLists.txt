@@ -11,11 +11,13 @@ add_executable( ${TARGET_NAME}
     one/one.cpp
     two/two.cpp
     three/three.cpp
+    four/four.cpp
 )
 
 target_include_directories( ${TARGET_NAME} PRIVATE
     one/
     two/
     three/
+    four/
     lib/
 )
