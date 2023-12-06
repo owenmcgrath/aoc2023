@@ -3,7 +3,7 @@
 void four::solve()
 {
     const string INPUT_FILE = "../input/4.txt";
-    const string OUTPUT_FILE = "../output/5.txt";
+    const string OUTPUT_FILE = "../output/4.txt";
 
     vector<string> input;
     LoadInput::load(INPUT_FILE, input);

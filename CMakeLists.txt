@@ -12,6 +12,8 @@ add_executable( ${TARGET_NAME}
     two/two.cpp
     three/three.cpp
     four/four.cpp
+    five/five.cpp
+    six/six.cpp
 )
 
 target_include_directories( ${TARGET_NAME} PRIVATE
@@ -19,5 +21,7 @@ target_include_directories( ${TARGET_NAME} PRIVATE
     two/
     three/
     four/
+    five/
+    six/
     lib/
 )
