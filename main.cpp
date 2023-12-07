@@ -6,7 +6,7 @@
 #include "four/four.h"
 #include "five/five.h"
 #include "six/six.h"
-
+#include "seven/seven.h"
 
 #include <functional>
 #include <vector>
@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
     }
     int day = atoi(argv[1]);
 
-    vector<function<void()>> funcs = {one::solve, two::solve, three::solve, four::solve, five::solve, six::solve};
+    vector<function<void()>> funcs = {one::solve, two::solve, three::solve, four::solve, five::solve, six::solve, seven::solve};
 
     if (day - 1 < funcs.size())
     {
