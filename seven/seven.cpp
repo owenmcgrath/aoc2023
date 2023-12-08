@@ -24,14 +24,12 @@ void seven::solve()
             parseHand(line, charMap, bid);
             insertHand(charMap, hand, bid, ranks);
             insertHand(charMap, hand, bid, jokerRanks, true);
-
-
         }
 
         int result1 = calculateWinnings(ranks);
         int result2 = calculateWinnings(jokerRanks);
 
-        std::cout << "Solved two: " << result1 << ":" <<  result2 << std::endl;
+        std::cout << "Solved seven: " << result1 << ":" <<  result2 << std::endl;
         output << result1 << std::endl;
         output << result2 << std::endl;
 

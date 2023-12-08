@@ -7,10 +7,9 @@
             "request": "launch",
             // Resolved by CMake Tools:
             "program": "${workspaceFolder}/build/aoc",
-            "args": ["7"],
+            "args": ["8"],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}/build",
-            "externalConsole": true,
             "MIMode": "gdb",
             "setupCommands": [
                 {
