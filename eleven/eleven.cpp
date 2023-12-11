@@ -7,8 +7,8 @@ void eleven::solve()
     ofstream output("../output/11.txt");
 
     vector<string> space;
-    set<int> emptySpaceRows;
-    set<int> emptySpaceCols;
+    unordered_set<int> emptySpaceRows;
+    unordered_set<int> emptySpaceCols;
     vector<pair<int,int>> galaxies;
     ifstream inHandle("../input/11.txt");
     string line;

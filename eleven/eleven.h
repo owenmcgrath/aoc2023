@@ -4,7 +4,7 @@
 #include <iostream>
 #include <sstream>
 #include <vector>
-#include <set>
+#include <unordered_set>
 #include <math.h>
 #include <fstream>
 #include  "../lib/loadInput.h"
