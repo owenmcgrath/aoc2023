@@ -17,6 +17,8 @@ add_executable( ${TARGET_NAME}
     seven/seven.cpp
     eight/eight.cpp
     nine/nine.cpp
+    ten/ten.cpp
+    eleven/eleven.cpp
 )
 
 target_include_directories( ${TARGET_NAME} PRIVATE
@@ -30,4 +32,6 @@ target_include_directories( ${TARGET_NAME} PRIVATE
     seven/
     eight/
     nine/
+    ten/
+    eleven/
 )
