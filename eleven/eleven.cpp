@@ -79,7 +79,7 @@ void eleven::solve()
             }
         }
     }
-    std::cout << "Solved ten: " << result1 << ":" << result2 << std::endl;
+    std::cout << "Solved eleven: " << result1 << ":" << result2 << std::endl;
     output << result1 << std::endl;
     output << result2 << std::endl;
 }
