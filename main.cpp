@@ -14,6 +14,11 @@
 #include "thirteen/thirteen.h"
 #include "fourteen/fourteen.h"
 #include "fifteen/fifteen.h"
+#include "sixteen/sixteen.h"
+#include "seventeen/seventeen.h"
+#include "eighteen/eighteen.h"
+#include "nineteen/nineteen.h"
+
 
 #include <functional>
 #include <vector>
@@ -30,7 +35,7 @@ int main(int argc, char *argv[])
     }
     int day = atoi(argv[1]);
 
-    vector<function<void()>> funcs = {one::solve, two::solve, three::solve, four::solve, five::solve, six::solve, seven::solve, eight::solve, nine::solve, ten::solve, eleven::solve, []{}, thirteen::solve, fourteen::solve, fifteen::solve};
+    vector<function<void()>> funcs = {one::solve, two::solve, three::solve, four::solve, five::solve, six::solve, seven::solve, eight::solve, nine::solve, ten::solve, eleven::solve, []{}, thirteen::solve, fourteen::solve, fifteen::solve, sixteen::solve, []{}, eighteen::solve, nineteen::solve};
 
     if (day - 1 < funcs.size())
     {

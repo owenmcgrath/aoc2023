@@ -22,6 +22,11 @@ add_executable( ${TARGET_NAME}
     thirteen/thirteen.cpp
     fourteen/fourteen.cpp
     fifteen/fifteen.cpp
+    sixteen/sixteen.cpp
+    seventeen/seventeen.cpp
+    eighteen/eighteen.cpp
+    nineteen/nineteen.cpp
+
 )
 
 target_include_directories( ${TARGET_NAME} PRIVATE
@@ -40,4 +45,8 @@ target_include_directories( ${TARGET_NAME} PRIVATE
     thirteen/
     fourteen/
     fifteen/
+    sixteen/
+    seventeen/
+    eighteen/
+    nineteen/
 )

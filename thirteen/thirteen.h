@@ -17,8 +17,8 @@ public:
 
     static void solve();
 
-    static vector<int> findVerticalLineOfReflection(const vector<string>& mirrorValley, int startRow, int endRow);
-    static vector<int> findHorizontalLineOfReflection(const vector<string>& mirrorValley, int startRow, int endRow);
+    static int findVerticalLineOfReflection(const vector<string>& mirrorValley, int startRow, int endRow);
+    static int findHorizontalLineOfReflection(const vector<string>& mirrorValley, int startRow, int endRow);
     static bool compareColumn(const vector<string>& mirrorValley, int startRow, int endRow, int col1, int col2);
 
 };

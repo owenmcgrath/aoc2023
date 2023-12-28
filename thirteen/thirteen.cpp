@@ -19,14 +19,12 @@ void thirteen::solve()
             endRow++;
         }
 
-        auto horiz = findHorizontalLineOfReflection(input, startRow, endRow-1);
-        auto vert = findVerticalLineOfReflection(input, startRow, endRow-1);
-        for (int row : horiz)
-            result1 += 100 * row;
-        for (int col : vert)
-            result1 += col;
+        auto horiz = findHorizontalLineOfReflection(input, startRow, endRow - 1);
+        auto vert = findVerticalLineOfReflection(input, startRow, endRow - 1);
+        result1 += 100 * horiz;
+        result1 += vert;
 
-        startRow = endRow+1;
+        startRow = endRow + 1;
         endRow++;
     }
 
@@ -37,10 +35,9 @@ void thirteen::solve()
 
     cout << "Solved thirteen " << result1 << ":" << result2 << endl;
 }
-vector<int> thirteen::findVerticalLineOfReflection(const vector<string> &mirrorValley, int startRow, int endRow)
+int thirteen::findVerticalLineOfReflection(const vector<string> &mirrorValley, int startRow, int endRow)
 {
     int colToCheck = 0;
-    vector<int> reflections;
     while (colToCheck < mirrorValley[startRow].length() - 1)
     {
         int lCol = colToCheck;
@@ -51,16 +48,17 @@ vector<int> thirteen::findVerticalLineOfReflection(const vector<string> &mirrorV
             rCol++;
         }
         if (rCol - lCol > 3 && (lCol < 0 || rCol >= mirrorValley[startRow].length()))
-            {reflections.push_back(1+((lCol + rCol) / 2)); return reflections;}
+        {
+            return 1 + ((lCol + rCol) / 2);
+        }
         colToCheck = rCol;
     }
 
-    return reflections;
+    return 0;
 }
 
-vector<int> thirteen::findHorizontalLineOfReflection(const vector<string> &mirrorValley, int startRow, int endRow)
+int thirteen::findHorizontalLineOfReflection(const vector<string> &mirrorValley, int startRow, int endRow)
 {
-    vector<int> reflections;
     int rowToCheck = startRow;
     while (rowToCheck < endRow - 1)
     {
@@ -72,10 +70,12 @@ vector<int> thirteen::findHorizontalLineOfReflection(const vector<string> &mirro
             downRow++;
         }
         if (downRow - upRow > 3 && (downRow > endRow || upRow < startRow))
-            {reflections.push_back(1+((downRow + upRow) / 2) - startRow); return reflections; }
+        {
+            return (1 + ((downRow + upRow) / 2) - startRow);
+        }
         rowToCheck = downRow;
     }
-    return reflections;
+    return 0;
 }
 
 bool thirteen::compareColumn(const vector<string> &mirrorValley, int startRow, int endRow, int col1, int col2)
@@ -88,7 +88,7 @@ bool thirteen::compareColumn(const vector<string> &mirrorValley, int startRow, i
     return equal;
 }
 
-//300
-//6
-//4
-//400
+// 300
+// 6
+// 4
+// 400
